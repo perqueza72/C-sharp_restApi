@@ -1,0 +1,59 @@
+2022-09-13 07:14:11.9862|INFO|ProductProject.API.Program|Initializing application...
+2022-09-13 07:14:18.0160|INFO|ProductProject.API.Program|Initializing application...
+2022-09-13 07:14:18.8901|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-13 07:14:19.0379|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-13 07:14:19.2384|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-13 07:14:19.2384|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-13 07:14:19.2929|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-13 07:14:19.7084|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-13 07:14:19.7895|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 81.4273ms 404 text/plain
+2022-09-13 07:14:57.5486|INFO|ProductProject.API.Program|Initializing application...
+2022-09-13 07:15:00.3476|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-13 07:15:00.6043|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-13 07:15:00.6762|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-13 07:15:00.7243|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-13 07:15:00.7754|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-13 07:15:01.2739|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-13 07:15:01.2739|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-13 07:15:01.2923|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 18.2149ms 200 
+2022-09-13 07:15:01.3520|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 79.8819ms 404 text/plain
+2022-09-13 07:19:55.3293|INFO|ProductProject.API.Program|Initializing application...
+2022-09-13 07:19:57.5939|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-13 07:19:57.7273|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-13 07:19:57.8110|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-13 07:19:57.8480|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-13 07:19:57.8920|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-13 07:19:58.4691|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-13 07:19:58.4809|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-13 07:19:58.6503|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 127.2168ms 200 
+2022-09-13 07:19:58.7722|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 333.1783ms 404 text/plain
+2022-09-13 07:20:41.6237|INFO|ProductProject.API.Program|Initializing application...
+2022-09-13 07:20:44.8828|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-13 07:20:45.0702|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-13 07:20:45.1746|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-13 07:20:45.2249|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-13 07:20:45.2969|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-13 07:20:46.9209|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-13 07:20:46.9209|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-13 07:20:46.9637|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 45.2385ms 200 
+2022-09-13 07:20:47.0758|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 168.8045ms 404 text/plain

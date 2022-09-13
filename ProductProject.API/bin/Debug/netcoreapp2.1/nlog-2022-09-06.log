@@ -1,0 +1,163 @@
+2022-09-06 11:37:50.9892|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:37:53.5360|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-06 11:38:07.9743|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (295ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-06 11:38:08.0617|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (83ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-06 11:38:08.1102|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-06 11:38:08.1159|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-06 11:38:08.1159|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-06 11:38:08.1279|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206101024_CityInfoDBInitialMigration'.
+2022-09-06 11:38:08.1449|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+);
+2022-09-06 11:38:08.1449|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+);
+2022-09-06 11:38:08.1449|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]);
+2022-09-06 11:38:08.1626|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206101024_CityInfoDBInitialMigration', N'2.1.14-servicing-32113');
+2022-09-06 11:38:08.1626|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206102741_CityInfoDBAddPoIDescription'.
+2022-09-06 11:38:08.1739|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL;
+2022-09-06 11:38:08.1739|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206102741_CityInfoDBAddPoIDescription', N'2.1.14-servicing-32113');
+2022-09-06 11:38:08.1739|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206111047_SampleData'.
+2022-09-06 11:38:08.2282|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-06 11:38:08.2392|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-06 11:38:08.2392|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-06 11:38:08.2662|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF;
+2022-09-06 11:38:08.2700|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206111047_SampleData', N'2.1.14-servicing-32113');
+2022-09-06 11:38:08.3099|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:38:08.5682|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:38:08.5682|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-06 11:38:08.5824|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.7748ms 200 
+2022-09-06 11:38:08.6344|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 68.5415ms 404 text/plain
+2022-09-06 11:38:08.9610|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-06 11:38:08.9610|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.2725ms 404 text/plain
+2022-09-06 11:38:27.2255|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:38:27.2255|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.6823ms 404 text/plain
+2022-09-06 11:38:44.6362|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/?id=1  
+2022-09-06 11:38:44.6362|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.6425ms 404 text/plain
+2022-09-06 11:52:38.8395|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:52:41.3983|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 11:52:41.4511|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:52:41.9365|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-06 11:52:41.9365|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:52:41.9593|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 23.9871ms 200 
+2022-09-06 11:52:42.0175|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 82.4897ms 404 text/plain
+2022-09-06 11:53:14.9304|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:53:16.8137|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 11:53:16.8684|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:53:17.3841|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:53:17.3841|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-06 11:53:17.4086|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 29.041ms 200 
+2022-09-06 11:53:17.4726|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 94.5603ms 404 text/plain
+2022-09-06 11:53:17.5163|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-06 11:53:17.5210|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.2003ms 404 text/plain
+2022-09-06 11:53:29.4837|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/?id=1  
+2022-09-06 11:53:29.4878|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.8817ms 404 text/plain
+2022-09-06 11:53:56.3251|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-06 11:53:56.3582|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-06 11:53:56.6226|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-06 11:54:37.1340|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:54:40.0792|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 11:54:40.1315|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:54:40.6305|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:54:40.6305|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-06 11:54:40.6517|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 22.73ms 200 
+2022-09-06 11:54:40.7112|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 83.0246ms 404 text/plain
+2022-09-06 11:54:41.0339|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-06 11:54:41.0339|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.5812ms 404 text/plain
+2022-09-06 11:54:42.8907|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-06 11:54:42.9162|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-06 11:54:43.1811|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-06 11:54:54.3322|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 11409.184ms
+2022-09-06 11:54:54.4118|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-06 11:54:54.4892|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 11599.6531ms 500 text/html; charset=utf-8
+2022-09-06 11:57:01.2168|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:57:18.3763|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:57:18.9745|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 11:57:19.0072|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:57:19.3561|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-06 11:57:19.3561|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:57:19.4378|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 81.8952ms 404 text/plain
+2022-09-06 11:57:19.4505|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-06 11:57:19.6860|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-06 11:57:19.6938|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 239.8328ms
+2022-09-06 11:57:19.7276|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-06 11:57:19.7690|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 413.1998ms 500 text/html; charset=utf-8
+2022-09-06 11:57:50.5829|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:58:04.6779|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 11:58:05.3174|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 11:58:05.3512|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 11:58:05.6365|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 11:58:05.7032|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 66.8179ms 404 text/plain
+2022-09-06 12:00:52.3765|INFO|CityInfo.API.Program|Initializing application...
+2022-09-06 12:00:58.7550|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-06 12:00:58.8151|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-06 12:00:59.1638|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-06 12:00:59.1638|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-06 12:00:59.1888|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 27.1563ms 200 
+2022-09-06 12:00:59.2425|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 82.004ms 404 text/plain
+2022-09-06 12:01:26.4308|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-06 12:01:26.4543|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-06 12:01:26.7298|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-06 12:01:34.1715|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 7712.3214ms
+2022-09-06 12:01:34.2263|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-06 12:01:34.2882|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 7857.5144ms 500 text/html; charset=utf-8

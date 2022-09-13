@@ -1,0 +1,8 @@
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.csproj.AssemblyReference.cache
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.AssemblyInfoInputs.cache
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.AssemblyInfo.cs
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.csproj.CoreCompileInputs.cache
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.RazorAssemblyInfo.cache
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\Product.API.RazorAssemblyInfo.cs
+C:\Pevaar\Others\a\07\demos\demos\end\CityInfo.API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

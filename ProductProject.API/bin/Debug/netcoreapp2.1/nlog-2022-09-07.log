@@ -1,0 +1,1000 @@
+2022-09-07 08:15:11.0174|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:15:13.5545|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-07 08:15:13.6215|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:15:14.2602|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:15:14.2602|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:15:14.3189|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 62.9384ms 200 
+2022-09-07 08:15:14.4319|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 175.3875ms 404 text/plain
+2022-09-07 08:15:26.9323|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:15:26.9554|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:15:27.2119|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:15:50.0329|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:15:52.8652|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:15:52.9565|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-07 08:15:53.0015|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:15:53.3076|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:15:53.3076|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:15:53.3233|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.0766ms 200 
+2022-09-07 08:15:53.3848|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 78.9854ms 404 text/plain
+2022-09-07 08:15:56.8902|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:15:56.9088|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:15:57.1776|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:15:57.1776|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:15:57.3100|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'CityInfo.API.Contexts.CityInfoContext'.
+System.ArgumentException: Keyword not supported: 'port'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2022-09-07 08:16:39.3285|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:16:41.8063|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:16:41.8582|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-07 08:16:41.9004|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:16:42.2701|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:16:42.2701|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:16:42.2858|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.4948ms 200 
+2022-09-07 08:16:42.3456|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 77.3875ms 404 text/plain
+2022-09-07 08:16:42.3865|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-07 08:16:42.3865|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.5654ms 404 text/plain
+2022-09-07 08:16:44.4628|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:16:44.4803|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:16:44.7348|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:16:44.7479|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:16:44.8327|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'CityInfo.API.Contexts.CityInfoContext'.
+System.ArgumentException: Keyword not supported: 'allow user variables'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2022-09-07 08:17:01.9039|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:17:04.3514|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:17:19.1389|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-07 08:17:19.1808|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:17:19.7149|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:17:19.7149|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:17:19.7149|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:17:19.7394|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 21.1463ms 200 
+2022-09-07 08:17:19.8043|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 91.3252ms 404 text/plain
+2022-09-07 08:17:19.8243|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:17:20.1193|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:17:20.1288|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:17:20.2114|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'prueba' on server 'localhost:3306'.
+2022-09-07 08:17:20.2235|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'CityInfo.API.Contexts.CityInfoContext'.
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (53): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-09-07 08:18:24.2539|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:18:26.7550|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:18:41.5047|ERROR|CityInfo.API.Program|An error occurred while migrating the database.
+2022-09-07 08:18:41.5441|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:18:42.0820|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:18:42.0820|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:18:42.0820|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:18:42.1069|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 22.1506ms 200 
+2022-09-07 08:18:42.1747|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 96.3085ms 404 text/plain
+2022-09-07 08:18:42.1944|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:18:42.2087|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-07 08:18:42.2087|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.433ms 404 text/plain
+2022-09-07 08:18:42.4454|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:18:42.4556|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:18:42.5364|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'prueba' on server 'localhost:3306'.
+2022-09-07 08:18:42.5495|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'CityInfo.API.Contexts.CityInfoContext'.
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (53): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-09-07 08:19:27.3700|INFO|CityInfo.API.Program|Initializing application...
+2022-09-07 08:19:29.7965|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:19:31.3082|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 08:19:31.3551|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 08:19:41.7164|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (322ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 08:19:41.8121|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (93ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 08:19:41.8772|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 08:19:41.8772|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 08:19:41.8948|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 08:19:41.8948|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206101024_CityInfoDBInitialMigration'.
+2022-09-07 08:19:41.9183|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Cities] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(200) NULL,
+    CONSTRAINT [PK_Cities] PRIMARY KEY ([Id])
+);
+2022-09-07 08:19:41.9242|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [PointsOfInterest] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CityId] int NOT NULL,
+    CONSTRAINT [PK_PointsOfInterest] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_PointsOfInterest_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [Cities] ([Id]) ON DELETE CASCADE
+);
+2022-09-07 08:19:41.9242|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_PointsOfInterest_CityId] ON [PointsOfInterest] ([CityId]);
+2022-09-07 08:19:41.9242|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206101024_CityInfoDBInitialMigration', N'2.1.14-servicing-32113');
+2022-09-07 08:19:41.9242|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206102741_CityInfoDBAddPoIDescription'.
+2022-09-07 08:19:41.9462|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [PointsOfInterest] ADD [Description] nvarchar(200) NULL;
+2022-09-07 08:19:41.9462|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206102741_CityInfoDBAddPoIDescription', N'2.1.14-servicing-32113');
+2022-09-07 08:19:41.9462|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20191206111047_SampleData'.
+2022-09-07 08:19:42.0480|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (84ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (1, N'The one with that big park.', N'New York City');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-07 08:19:42.0722|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (2, N'The one with the cathedral that was never really finished.', N'Antwerp');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-07 08:19:42.0923|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] ON;
+INSERT INTO [Cities] ([Id], [Description], [Name])
+VALUES (3, N'The one with that big tower.', N'Paris');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[Cities]'))
+    SET IDENTITY_INSERT [Cities] OFF;
+2022-09-07 08:19:42.1126|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] ON;
+INSERT INTO [PointsOfInterest] ([Id], [CityId], [Description], [Name])
+VALUES (1, 1, N'The most visited urban park in the United States.', N'Central Park'),
+(2, 1, N'A 102-story skyscraper located in Midtown Manhattan.', N'Empire State Building'),
+(3, 2, N'A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.', N'Cathedral'),
+(4, 2, N'The the finest example of railway architecture in Belgium.', N'Antwerp Central Station'),
+(5, 3, N'A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.', N'Eiffel Tower'),
+(6, 3, N'The world''s largest museum.', N'The Louvre');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CityId', N'Description', N'Name') AND [object_id] = OBJECT_ID(N'[PointsOfInterest]'))
+    SET IDENTITY_INSERT [PointsOfInterest] OFF;
+2022-09-07 08:19:42.1126|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191206111047_SampleData', N'2.1.14-servicing-32113');
+2022-09-07 08:19:42.1587|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 08:19:42.4209|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 08:19:42.4209|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 08:19:42.4361|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.9397ms 200 
+2022-09-07 08:19:42.5031|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 85.422ms 404 text/plain
+2022-09-07 08:19:42.5631|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-07 08:19:42.5716|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 7.8295ms 404 text/plain
+2022-09-07 08:20:20.3369|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 08:20:20.3691|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCities() on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-09-07 08:20:20.6435|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) - Validation state: Valid
+2022-09-07 08:20:20.6648|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'CityInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 08:20:20.7411|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Cities] AS [c]
+ORDER BY [c].[Name]
+2022-09-07 08:20:20.7850|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 133.4412ms.
+2022-09-07 08:20:20.7850|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CityInfo.API.Models.CityWithoutPointsOfInterestDto, CityInfo.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-07 08:20:20.8528|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CityInfo.API.Controllers.CitiesController.GetCities (CityInfo.API) in 473.9621ms
+2022-09-07 08:20:20.8528|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 520.7024ms 200 application/json; charset=utf-8
+2022-09-07 09:56:17.3204|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 09:56:20.2358|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 09:56:20.3081|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 09:56:21.8206|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 09:56:21.8523|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 09:56:32.1469|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (256ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 09:56:32.2153|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (65ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 09:56:32.2636|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 09:56:32.2719|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 09:56:32.2719|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 09:56:32.2863|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 09:56:32.3237|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 09:56:32.7949|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 09:56:32.7949|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 09:56:32.7981|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 09:56:32.8239|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 25.3063ms 200 
+2022-09-07 09:56:32.8855|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 92.5071ms 404 text/plain
+2022-09-07 09:56:32.9093|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 09:56:32.9253|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-07 09:56:32.9253|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.4386ms 404 text/plain
+2022-09-07 09:56:33.1524|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 09:56:33.1620|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 09:56:33.2608|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 09:56:33.2760|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:9e31ddaa-e530-4f29-9a53-a64b7a5a0477
+Error Number:208,State:1,Class:16
+2022-09-07 09:56:43.8126|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 10898.2116ms
+2022-09-07 09:56:43.8661|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 09:56:43.9431|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 11150.4319ms 500 text/html; charset=utf-8
+2022-09-07 09:59:04.7532|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 09:59:07.4230|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 09:59:07.4759|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 09:59:08.5384|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 09:59:08.5643|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 09:59:16.4269|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 09:59:17.0788|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 09:59:17.1135|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 09:59:28.3440|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (322ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 09:59:28.4195|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 09:59:28.4682|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 09:59:28.4712|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 09:59:28.4712|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 09:59:28.4712|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 09:59:28.4992|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 09:59:28.7985|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 09:59:28.8498|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 51.4336ms 404 text/plain
+2022-09-07 10:00:58.5608|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:01:01.3981|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:01:01.4494|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:01:02.4936|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:01:02.5202|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:01:12.8698|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (321ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:01:12.9677|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (92ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:01:13.0230|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:01:13.0230|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:01:13.0330|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:01:13.0330|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 10:01:13.0752|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:01:13.5403|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:01:13.5403|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:01:13.5617|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 20.4429ms 200 
+2022-09-07 10:01:13.6177|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 80.9744ms 404 text/plain
+2022-09-07 10:01:17.1714|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 10:01:17.1899|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:01:17.4088|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:01:17.4232|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:01:17.4933|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:01:17.5060|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e8029dfb-80c1-4858-8ff8-72861d0f1a11
+Error Number:208,State:1,Class:16
+2022-09-07 10:04:02.8178|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 165623.4089ms
+2022-09-07 10:04:02.8556|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 10:04:02.9161|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 165745.8713ms 500 text/html; charset=utf-8
+2022-09-07 10:04:05.5275|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 10:04:05.5275|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:04:05.5412|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:04:05.5412|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:04:05.5523|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:04:05.5523|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e8029dfb-80c1-4858-8ff8-72861d0f1a11
+Error Number:208,State:1,Class:16
+2022-09-07 10:04:19.0363|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 13503.0749ms
+2022-09-07 10:04:19.0363|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 10:04:19.0759|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 13548.6409ms 500 text/html; charset=utf-8
+2022-09-07 10:04:42.5955|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 10:04:42.5955|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:04:42.5955|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:04:42.6134|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:04:42.6134|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:04:42.6292|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e8029dfb-80c1-4858-8ff8-72861d0f1a11
+Error Number:208,State:1,Class:16
+2022-09-07 10:04:53.9654|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 11359.6567ms
+2022-09-07 10:04:53.9751|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 10:04:53.9994|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 11404.7263ms 500 text/html; charset=utf-8
+2022-09-07 10:05:21.8975|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:05:24.7825|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:05:24.8373|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:05:25.8989|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:05:25.9270|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:05:36.2073|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (255ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:05:36.2842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:05:36.3354|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:05:36.3354|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:05:36.3454|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:05:36.3454|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 10:05:36.3939|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:05:36.7406|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:05:36.7406|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:05:36.7558|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.6628ms 200 
+2022-09-07 10:05:36.8050|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 66.8188ms 404 text/plain
+2022-09-07 10:05:37.9839|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 10:05:38.0020|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:06:02.2158|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:06:02.2446|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:06:02.3335|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:06:02.3490|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:a123ef88-e4c1-4503-9f88-1e849c74ca7e
+Error Number:208,State:1,Class:16
+2022-09-07 10:06:11.4132|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 33405.8043ms
+2022-09-07 10:06:11.4460|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 10:06:11.4972|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 33513.516ms 500 text/html; charset=utf-8
+2022-09-07 10:06:13.8591|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities?id=1  
+2022-09-07 10:06:13.8629|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:06:18.5637|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:06:24.2782|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:11:16.7659|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:11:19.5859|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:11:19.6462|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:11:20.6445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:11:20.6691|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:11:28.8101|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:11:29.4359|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:11:29.4814|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:11:40.7926|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (311ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:11:40.8627|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:11:40.9027|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:11:40.9027|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:11:40.9027|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:11:40.9118|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 10:11:40.9276|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:11:41.2535|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:11:41.3032|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 49.7383ms 404 text/plain
+2022-09-07 10:13:10.9842|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:13:13.2868|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:13:13.3654|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:13:14.7957|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:13:14.8338|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:13:25.1385|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (273ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:13:25.2282|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:13:25.2838|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:13:25.2838|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:13:25.2838|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:13:25.2996|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 10:13:25.3311|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:13:25.7955|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:13:25.7955|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2022-09-07 10:13:25.7955|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:13:25.8159|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.9297ms 200 
+2022-09-07 10:13:25.9110|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 116.8538ms 404 text/plain
+2022-09-07 10:13:25.9311|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:13:46.8953|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:13:49.7344|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:13:49.7902|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:13:50.9141|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:13:50.9422|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:14:01.3329|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (353ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:14:01.4142|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (78ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:14:01.4656|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:14:01.4722|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:14:01.4722|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:14:01.4722|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2022-09-07 10:14:01.5213|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:14:01.8600|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:14:01.8600|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:14:01.8773|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 18.4715ms 200 
+2022-09-07 10:14:01.9253|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 67.9446ms 404 text/plain
+2022-09-07 10:14:09.8649|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2022-09-07 10:14:09.8884|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:14:32.8553|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:14:39.6310|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:14:39.7243|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:14:39.7379|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:14370415-5126-432a-94b3-1eee4645ba8e
+Error Number:208,State:1,Class:16
+2022-09-07 10:14:48.4771|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 38583.2135ms
+2022-09-07 10:14:48.5130|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2022-09-07 10:14:48.5696|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 38705.6551ms 500 text/html; charset=utf-8
+2022-09-07 10:42:28.1677|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:42:28.2509|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:42:50.8499|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:42:50.9165|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:42:51.9406|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:42:51.9406|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:42:51.9406|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:42:51.9406|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174228_MyFirstMigration'.
+2022-09-07 10:42:51.9810|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DROP TABLE [PointsOfInterest];
+2022-09-07 10:43:11.9876|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:43:12.0554|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:43:12.1816|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:43:12.1816|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:43:12.1816|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:43:12.1928|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174228_MyFirstMigration'.
+2022-09-07 10:43:12.2199|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DROP TABLE [PointsOfInterest];
+2022-09-07 10:44:48.0435|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:44:48.1111|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:45:00.1669|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:45:00.2329|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:45:00.3604|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:45:00.3621|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:45:00.3621|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:45:00.3621|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 10:45:00.3938|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 10:45:07.0167|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:45:09.8303|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:45:09.8902|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:45:10.0742|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:45:10.0950|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:45:20.5225|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (376ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:45:20.5919|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (64ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:45:20.6662|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:45:20.6662|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:45:20.6754|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:45:20.6754|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 10:45:20.7095|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 10:45:20.7357|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-07 10:45:20.7659|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:45:21.1222|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2022-09-07 10:45:21.1222|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:45:21.1222|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:45:21.1471|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 21.0544ms 200 
+2022-09-07 10:45:21.2063|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 86.5073ms 404 text/plain
+2022-09-07 10:45:21.2268|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 10:45:26.1000|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 10:45:26.1000|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:45:26.1781|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 10:45:26.1939|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred in the database while iterating the results of a query for context type 'ProductProject.API.Contexts.ProductContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:f037eb00-b12a-4054-bb04-ca8e1b0b495b
+Error Number:208,State:1,Class:16
+2022-09-07 10:46:30.2608|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:46:30.3251|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:46:30.4477|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:46:30.4477|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:46:30.4556|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:46:30.4556|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 10:46:30.4874|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 10:50:18.1428|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:50:18.2124|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:50:18.3374|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:50:18.3374|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:50:18.3374|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:50:18.3467|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 10:50:18.3708|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 10:54:23.1861|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 10:54:25.8503|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 10:54:25.9259|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 10:54:26.1338|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 10:54:26.1537|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [CityInfoDB];
+2022-09-07 10:54:38.7047|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (379ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CityInfoDB];
+2022-09-07 10:54:38.7692|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CityInfoDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-09-07 10:54:38.8214|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 10:54:38.8214|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 10:54:38.8312|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 10:54:38.8312|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 10:54:38.8693|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 10:54:52.1195|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-07 10:54:52.1599|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 10:54:52.6909|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 10:54:52.6909|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 10:54:52.7087|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 19.7099ms 200 
+2022-09-07 10:54:52.7647|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 76.9075ms 404 text/plain
+2022-09-07 11:34:21.2086|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 11:34:21.2759|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:34:21.3468|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:34:21.3468|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 11:34:21.3885|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-09-07 11:34:21.3885|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 11:34:21.3885|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 11:34:21.3956|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907174448_NewMigration'.
+2022-09-07 11:34:21.4220|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE [Products] SET [Date] = '2022-09-07T17:44:48.0000000Z'
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT;
+2022-09-07 11:36:03.3443|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Value' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+2022-09-07 11:36:03.4162|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:36:03.4723|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:38:58.1653|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:38:58.2617|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:38:58.3082|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 11:38:58.3082|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 11:39:03.7393|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:39:03.8338|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:41:38.4105|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:41:38.5092|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:41:38.5092|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 11:41:38.5176|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-09-07 11:41:38.5176|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-09-07 11:41:38.5176|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20220907183903_NewMigration'.
+2022-09-07 11:41:38.5452|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(max) NULL,
+    [ProductType] int NOT NULL,
+    [Value] decimal(18,4) NOT NULL,
+    [Date] datetime2 NOT NULL,
+    [State] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+2022-09-07 11:41:38.5641|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [Date], [Description], [ProductType], [State], [Value])
+VALUES (1, '2022-09-07T18:39:03.6720000Z', N'The one with that big park.', 0, 0, 100.0);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+2022-09-07 11:41:38.5966|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [Date], [Description], [ProductType], [State], [Value])
+VALUES (2, '2022-09-07T18:39:03.6720000Z', N'The one with the cathedral that was never really finished.', 0, 0, 200.0);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+2022-09-07 11:41:38.5966|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [Date], [Description], [ProductType], [State], [Value])
+VALUES (3, '2022-09-07T18:39:03.6720000Z', N'The one with that big tower.', 0, 0, 300.0);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Date', N'Description', N'ProductType', N'State', N'Value') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+2022-09-07 11:41:38.5966|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220907183903_NewMigration', N'2.1.14-servicing-32113');
+2022-09-07 11:41:49.1665|INFO|ProductProject.API.Program|Initializing application...
+2022-09-07 11:41:52.0385|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:41:52.1417|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:41:52.2063|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-07 11:41:52.2367|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-07 11:41:52.2772|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-07 11:41:52.6345|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-07 11:41:52.6345|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-07 11:41:52.6566|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 35.6428ms 200 
+2022-09-07 11:41:52.7345|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 116.5396ms 404 text/plain
+2022-09-07 11:41:55.8244|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/cities  
+2022-09-07 11:41:55.8437|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts() on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-07 11:41:55.8675|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-07 11:41:55.8812|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-07 11:41:56.1311|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-07 11:41:56.1881|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-07 11:41:56.2537|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 117.8136ms.
+2022-09-07 11:41:56.2537|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-07 11:41:56.3146|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 462.2728ms
+2022-09-07 11:41:56.3146|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 496.8659ms 200 application/json; charset=utf-8

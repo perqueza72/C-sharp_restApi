@@ -1,0 +1,777 @@
+2022-09-12 07:45:48.6978|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:45:52.4724|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:45:52.6590|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:45:52.8619|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:45:52.9360|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:45:53.0070|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:45:53.3152|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 07:45:53.3152|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:45:53.3354|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 21.1778ms 200 
+2022-09-12 07:45:53.3899|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 77.5997ms 404 text/plain
+2022-09-12 07:46:02.5622|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products  
+2022-09-12 07:46:02.6022|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:46:02.6211|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:46:02.6335|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:46:02.8479|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:46:02.9115|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-12 07:46:02.9683|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 115.2956ms.
+2022-09-12 07:46:02.9782|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 07:46:03.0408|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 433.1344ms
+2022-09-12 07:46:03.0408|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 484.5983ms 200 application/json; charset=utf-8
+2022-09-12 07:46:48.1283|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 100
+2022-09-12 07:46:48.1371|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:46:48.1371|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:46:48.1371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:46:48.1825|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 07:46:48.2355|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 07:46:48.3058|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Date], [Description], [ProductType], [State], [Value])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-09-12 07:46:48.3058|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult in 131.885ms.
+2022-09-12 07:46:48.3058|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Models.ProductModel.Product'.
+2022-09-12 07:46:48.3304|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 190.9134ms
+2022-09-12 07:46:48.3304|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 205.0459ms 201 application/json; charset=utf-8
+2022-09-12 07:49:48.3125|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:49:55.0952|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:49:55.7717|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:49:55.8388|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:49:55.8840|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:49:55.8840|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:49:55.9057|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:49:56.0642|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:49:56.1174|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 53.164ms 404 text/plain
+2022-09-12 07:50:35.6534|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:50:41.9994|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:50:42.6497|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:50:42.7221|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:50:42.7648|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:50:42.7648|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:50:42.7852|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:50:42.9928|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:50:43.0413|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 48.6922ms 404 text/plain
+2022-09-12 07:51:37.5166|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:51:43.6771|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:51:44.3690|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:51:44.4366|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:51:44.4781|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:51:44.4781|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:51:44.5048|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:51:44.6679|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:51:44.7328|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 65.1206ms 404 text/plain
+2022-09-12 07:53:01.2644|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:53:03.8290|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:53:03.9348|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:53:03.9967|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:53:04.0221|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:53:04.0649|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:53:04.4039|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:53:04.4039|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 07:53:04.4190|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.9073ms 200 
+2022-09-12 07:53:04.4707|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 67.7212ms 404 text/plain
+2022-09-12 07:53:04.7719|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-12 07:53:04.7751|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.5061ms 404 text/plain
+2022-09-12 07:53:39.0224|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 07:53:41.3530|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:53:41.4724|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:53:41.5370|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 07:53:41.5660|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 07:53:41.6051|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 07:53:42.0197|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 07:53:42.0197|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 07:53:42.0427|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 20.1648ms 200 
+2022-09-12 07:53:42.1096|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 89.7277ms 404 text/plain
+2022-09-12 07:53:43.0432|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products  
+2022-09-12 07:53:43.0681|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:53:43.1257|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:53:43.1476|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:53:43.3814|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:53:43.4313|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-12 07:53:43.4873|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 100.7372ms.
+2022-09-12 07:53:43.4965|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 07:53:43.5452|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 471.9594ms
+2022-09-12 07:53:43.5452|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 507.6804ms 200 application/json; charset=utf-8
+2022-09-12 07:53:50.9683|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=big  
+2022-09-12 07:53:50.9683|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:53:50.9683|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:53:50.9813|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:53:50.9813|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:53:51.0237|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 07:53:51.0333|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 07:53:51.0333|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.79ms.
+2022-09-12 07:53:51.0399|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 07:53:51.0399|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 68.3072ms
+2022-09-12 07:53:51.0399|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 78.5465ms 200 application/json; charset=utf-8
+2022-09-12 07:53:57.9035|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=1  
+2022-09-12 07:53:57.9035|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:53:57.9035|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:53:57.9153|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:53:57.9153|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:53:57.9375|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 07:53:57.9375|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 19.2407ms.
+2022-09-12 07:53:57.9462|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 07:53:57.9462|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 39.1414ms
+2022-09-12 07:53:57.9462|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 48.2969ms 404 text/plain
+2022-09-12 07:54:03.6333|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=2  
+2022-09-12 07:54:03.6333|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:54:03.6333|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:54:03.6333|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:54:03.6504|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:54:03.6504|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 07:54:03.6504|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.9211ms.
+2022-09-12 07:54:03.6504|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 07:54:03.6660|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 26.5659ms
+2022-09-12 07:54:03.6660|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 35.3354ms 200 application/json; charset=utf-8
+2022-09-12 07:54:10.2054|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=-1  
+2022-09-12 07:54:10.2054|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:54:10.2122|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:54:10.2122|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:54:10.2122|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 07:54:10.2122|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 07:54:10.2279|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 4.3984ms.
+2022-09-12 07:54:10.2279|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 07:54:10.2279|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 22.5251ms
+2022-09-12 07:54:10.2279|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 32.5812ms 404 text/plain
+2022-09-12 07:54:17.6633|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 86
+2022-09-12 07:54:17.6677|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:54:17.6677|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:54:17.6677|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:54:17.7043|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 07:54:17.7043|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1.3374ms.
+2022-09-12 07:54:17.7119|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 07:54:17.7119|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 44.1588ms
+2022-09-12 07:54:17.7119|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 55.1639ms 400 text/plain; charset=utf-8
+2022-09-12 07:54:21.0905|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 71
+2022-09-12 07:54:21.0905|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:54:21.0905|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:54:21.1029|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:54:21.1029|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 07:54:21.1029|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.2933ms.
+2022-09-12 07:54:21.1029|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 07:54:21.1187|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 22.3616ms
+2022-09-12 07:54:21.1187|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 33.544ms 400 text/plain; charset=utf-8
+2022-09-12 07:54:27.9023|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 47
+2022-09-12 07:54:27.9023|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 07:54:27.9023|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 07:54:27.9023|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 07:54:27.9163|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 07:54:27.9163|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.2045ms.
+2022-09-12 07:54:27.9163|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 07:54:27.9163|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 16.3979ms
+2022-09-12 07:54:27.9163|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 25.4571ms 400 text/plain; charset=utf-8
+2022-09-12 08:09:27.7989|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 08:09:29.9841|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:09:30.1604|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:09:30.2182|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 08:09:30.2628|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 08:09:30.3095|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 08:09:30.5611|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 08:09:30.5611|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 08:09:30.5787|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 19.9201ms 200 
+2022-09-12 08:09:30.6320|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 73.0413ms 404 text/plain
+2022-09-12 08:09:32.7797|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/1  0
+2022-09-12 08:09:32.8066|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:09:32.8218|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:09:32.8218|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:09:33.0724|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2022-09-12 08:09:33.1167|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 304.3215ms
+2022-09-12 08:09:33.1219|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 342.0072ms 400 application/json; charset=utf-8
+2022-09-12 08:09:42.5777|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/198 application/json 88
+2022-09-12 08:09:42.5777|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:09:42.5891|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:09:42.5891|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:09:42.6357|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 08:09:42.7224|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 08:09:42.7372|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 96.8698ms.
+2022-09-12 08:09:42.7372|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 08:09:42.7437|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 157.7854ms
+2022-09-12 08:09:42.7437|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 172.0903ms 400 text/plain; charset=utf-8
+2022-09-12 08:09:46.7942|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/1 application/json 102
+2022-09-12 08:09:46.7942|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:09:46.7942|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:09:46.8073|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:09:46.8073|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 08:09:46.8073|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.0337ms.
+2022-09-12 08:09:46.8073|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 08:09:46.8211|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 19.9146ms
+2022-09-12 08:09:46.8211|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 29.7337ms 400 text/plain; charset=utf-8
+2022-09-12 08:09:53.7776|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/1 application/json 88
+2022-09-12 08:09:53.7776|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:09:53.7776|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:09:53.7906|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:09:53.7906|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 08:09:53.7906|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 08:09:53.8051|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 6.5263ms.
+2022-09-12 08:09:53.8051|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 08:09:53.8051|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 25.8302ms
+2022-09-12 08:09:53.8051|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 35.9552ms 400 text/plain; charset=utf-8
+2022-09-12 08:10:01.0678|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/2 application/json 88
+2022-09-12 08:10:01.0720|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:10:01.0720|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:10:01.0959|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:10:01.0959|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 08:10:01.1048|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 08:10:01.3051|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (144ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [Date] = @p0, [Description] = @p1, [ProductType] = @p2, [State] = @p3, [Value] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2022-09-12 08:10:01.3129|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 210.782ms.
+2022-09-12 08:10:01.3129|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 08:10:01.3129|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 245.9999ms
+2022-09-12 08:10:01.3241|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 257.3216ms 200 application/json; charset=utf-8
+2022-09-12 08:10:16.8745|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/2 application/json 130
+2022-09-12 08:10:16.8745|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:10:16.8849|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:10:16.9006|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:10:16.9006|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 08:10:16.9006|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 08:10:16.9196|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [Date] = @p0, [Description] = @p1, [ProductType] = @p2, [State] = @p3, [Value] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2022-09-12 08:10:16.9196|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.3642ms.
+2022-09-12 08:10:16.9196|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 08:10:16.9196|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 43.8161ms
+2022-09-12 08:10:16.9315|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 57.0054ms 200 application/json; charset=utf-8
+2022-09-12 08:21:27.3024|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 08:21:27.9797|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:21:28.0552|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:21:28.0996|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 08:21:28.0996|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 08:21:28.1235|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 08:21:28.2649|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=big&id=1  
+2022-09-12 08:21:28.3344|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:21:28.3383|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:21:28.3383|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:21:28.5506|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 08:21:28.6046|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 08:21:28.6046|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 62.189ms.
+2022-09-12 08:21:28.6211|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 08:21:28.6211|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 286.8442ms
+2022-09-12 08:21:28.6211|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 365.1344ms 404 text/plain
+2022-09-12 08:21:34.4000|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 08:21:36.7723|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:21:36.8707|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:21:36.9334|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 08:21:36.9621|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 08:21:37.0020|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 08:21:37.4854|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 08:21:37.4854|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 08:21:37.4999|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.4214ms 200 
+2022-09-12 08:21:37.5517|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 68.2969ms 404 text/plain
+2022-09-12 08:21:37.6061|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-12 08:21:37.6061|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.5625ms 404 text/plain
+2022-09-12 08:21:37.8986|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=big&id=1  
+2022-09-12 08:21:37.9320|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 08:21:37.9458|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 08:21:37.9620|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 08:21:38.2402|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 08:21:38.2454|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.5189ms.
+2022-09-12 08:21:38.2454|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 08:21:38.2636|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 325.2234ms
+2022-09-12 08:21:38.2636|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 372.0675ms 400 text/plain; charset=utf-8
+2022-09-12 09:01:25.9227|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 09:01:28.3647|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:01:28.4922|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:01:28.5948|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 09:01:28.6353|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 09:01:28.6928|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 09:01:29.0778|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 09:01:29.1420|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 43.2747ms 200 
+2022-09-12 09:02:03.6137|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 09:02:03.7089|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 95.815ms 404 text/plain
+2022-09-12 09:02:03.7793|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-12 09:02:03.7793|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.6537ms 404 text/plain
+2022-09-12 09:04:59.7842|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 86
+2022-09-12 09:04:59.8152|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:04:59.8397|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:04:59.8676|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:00.1625|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:00.1688|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1.1412ms.
+2022-09-12 09:05:00.1688|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:05:00.1841|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 363.6978ms
+2022-09-12 09:05:00.1841|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 405.2854ms 400 text/plain; charset=utf-8
+2022-09-12 09:05:21.9086|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 71
+2022-09-12 09:05:21.9179|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:05:21.9179|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:05:21.9362|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:21.9362|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:21.9362|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.226ms.
+2022-09-12 09:05:21.9362|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:05:21.9491|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 28.2464ms
+2022-09-12 09:05:21.9491|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 44.0205ms 400 text/plain; charset=utf-8
+2022-09-12 09:05:31.9360|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 47
+2022-09-12 09:05:31.9360|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:05:31.9360|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:05:31.9493|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:31.9493|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:31.9493|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.2608ms.
+2022-09-12 09:05:31.9621|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:05:31.9621|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 23.2953ms
+2022-09-12 09:05:31.9621|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 32.8539ms 400 text/plain; charset=utf-8
+2022-09-12 09:05:39.6261|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 53
+2022-09-12 09:05:39.6261|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:05:39.6261|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:05:39.6395|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:39.6395|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:39.6395|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.1852ms.
+2022-09-12 09:05:39.6507|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:05:39.6507|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 21.1202ms
+2022-09-12 09:05:39.7081|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 65.0289ms 400 text/plain; charset=utf-8
+2022-09-12 09:05:45.5880|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 43
+2022-09-12 09:05:45.5880|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:05:45.6108|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:05:45.6188|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:45.6188|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:45.6188|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.0143ms.
+2022-09-12 09:05:45.6188|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:05:45.6351|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 40.3473ms
+2022-09-12 09:05:45.6351|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 49.9816ms 400 text/plain; charset=utf-8
+2022-09-12 09:05:53.2403|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:1028/api/products application/json 100
+2022-09-12 09:05:53.2439|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InsertProduct(ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:05:53.2439|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:05:53.2439|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:05:53.2603|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:05:53.3723|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 09:05:53.4610|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Date], [Description], [ProductType], [State], [Value])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-09-12 09:05:53.4772|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult in 212.8538ms.
+2022-09-12 09:05:53.4772|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Models.ProductModel.Product'.
+2022-09-12 09:05:53.4935|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.InsertProduct (ProductProject.API) in 245.85ms
+2022-09-12 09:05:53.4935|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 256.54ms 201 application/json; charset=utf-8
+2022-09-12 09:06:51.0329|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=20  
+2022-09-12 09:06:51.0420|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:06:51.0420|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:06:51.0690|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:06:51.0758|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:06:51.0993|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:06:51.1149|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 35.8512ms.
+2022-09-12 09:06:51.1181|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 09:06:51.1181|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 79.3077ms
+2022-09-12 09:06:51.1181|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 95.0896ms 200 application/json; charset=utf-8
+2022-09-12 09:07:00.7383|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=-1  
+2022-09-12 09:07:00.7438|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:07:00.7438|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:07:00.7438|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:07:00.7585|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:07:00.7585|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:07:00.7585|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 5.0643ms.
+2022-09-12 09:07:00.7585|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 09:07:00.7767|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 29.3392ms
+2022-09-12 09:07:00.7767|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 41.7625ms 404 text/plain
+2022-09-12 09:07:07.0249|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=big  
+2022-09-12 09:07:07.0249|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:07:07.0249|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:07:07.0537|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:07:07.0566|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:07:07.0712|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 09:07:07.0907|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 09:07:07.0907|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 34.1095ms.
+2022-09-12 09:07:07.0907|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 09:07:07.0907|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 68.0186ms
+2022-09-12 09:07:07.1030|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 81.2354ms 200 application/json; charset=utf-8
+2022-09-12 09:07:14.2976|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=hol  
+2022-09-12 09:07:14.2976|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:07:14.2976|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:07:14.3191|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:07:14.3225|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:07:14.3225|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 09:07:14.3225|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__description_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE (CHARINDEX(@__description_0, [p].[Description]) > 0) OR (@__description_0 = N'')
+2022-09-12 09:07:14.3225|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.6166ms.
+2022-09-12 09:07:14.3382|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 09:07:14.3382|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 38.4707ms
+2022-09-12 09:07:14.3382|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 47.3942ms 200 application/json; charset=utf-8
+2022-09-12 09:07:26.0189|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?description=big&id=1  
+2022-09-12 09:07:26.0189|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:07:26.0259|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:07:26.0259|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:07:26.0259|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:07:26.0445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.0109ms.
+2022-09-12 09:07:26.0445|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:07:26.0445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 27.1495ms
+2022-09-12 09:07:26.0577|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 37.1796ms 400 text/plain; charset=utf-8
+2022-09-12 09:07:41.1692|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products  
+2022-09-12 09:07:41.1692|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:07:41.1830|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:07:41.1830|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:07:41.1830|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:07:41.1991|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-12 09:07:41.1991|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.506ms.
+2022-09-12 09:07:41.1991|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 09:07:41.2124|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 33.0551ms
+2022-09-12 09:07:41.2124|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 46.3023ms 200 application/json; charset=utf-8
+2022-09-12 09:08:18.4607|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=198  
+2022-09-12 09:08:18.4659|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:08:18.4659|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:08:18.4893|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:08:18.4893|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:08:18.4981|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:08:18.4981|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 5.3736ms.
+2022-09-12 09:08:18.4981|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 09:08:18.4981|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 35.8441ms
+2022-09-12 09:08:18.5100|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 50.0287ms 404 text/plain
+2022-09-12 09:08:23.6545|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/198 application/json 88
+2022-09-12 09:08:23.6545|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:08:23.6545|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:08:23.6682|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:08:23.6682|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:08:23.6682|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 09:08:23.6821|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 6.9332ms.
+2022-09-12 09:08:23.6821|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:08:23.6821|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 25.071ms
+2022-09-12 09:08:23.6821|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 37.3489ms 400 text/plain; charset=utf-8
+2022-09-12 09:08:34.7536|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/1 application/json 102
+2022-09-12 09:08:34.7581|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:08:34.7581|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:08:34.7581|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:08:34.7581|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:08:34.7766|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.0293ms.
+2022-09-12 09:08:34.7766|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:08:34.7766|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 22.2064ms
+2022-09-12 09:08:34.7766|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 34.0407ms 400 text/plain; charset=utf-8
+2022-09-12 09:08:43.7445|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/1  0
+2022-09-12 09:08:43.7445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:08:43.7445|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:08:43.7624|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:08:43.7624|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2022-09-12 09:08:43.7624|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 22.1154ms
+2022-09-12 09:08:43.7776|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 32.4296ms 400 application/json; charset=utf-8
+2022-09-12 09:09:04.5484|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/20 application/json 130
+2022-09-12 09:09:04.5556|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:09:04.5556|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:09:04.5556|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:09:04.5715|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:09:04.5715|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 09:09:04.5715|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [Date] = @p0, [Description] = @p1, [ProductType] = @p2, [State] = @p3, [Value] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2022-09-12 09:09:04.5878|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.8077ms.
+2022-09-12 09:09:04.5878|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 09:09:04.5878|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 35.2967ms
+2022-09-12 09:09:04.5878|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 48.3476ms 200 application/json; charset=utf-8
+2022-09-12 09:09:13.9519|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 PUT http://localhost:1028/api/products/20 application/json 130
+2022-09-12 09:09:13.9519|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateProduct(Int32, ProductProject.API.Models.ProductModel.Product) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:09:13.9519|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:09:13.9630|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:09:13.9630|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:09:13.9630|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [c]
+        WHERE [c].[Id] = @__cityId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2022-09-12 09:09:13.9630|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [Date] = @p0, [Description] = @p1, [ProductType] = @p2, [State] = @p3, [Value] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2022-09-12 09:09:13.9808|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.5317ms.
+2022-09-12 09:09:13.9808|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 09:09:13.9808|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.UpdateProduct (ProductProject.API) in 29.0248ms
+2022-09-12 09:09:13.9808|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 38.3815ms 200 application/json; charset=utf-8
+2022-09-12 09:09:28.3193|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=20  
+2022-09-12 09:09:28.3221|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:09:28.3221|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:09:28.3438|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:09:28.3438|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:09:28.3438|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:09:28.3548|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.451ms.
+2022-09-12 09:09:28.3548|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ProductProject.API.Entities.Product'.
+2022-09-12 09:09:28.3548|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 35.2949ms
+2022-09-12 09:09:28.3548|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 43.3219ms 200 application/json; charset=utf-8
+2022-09-12 09:09:57.9379|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:1028/api/products/1789  
+2022-09-12 09:09:57.9379|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteProduct(Int32) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:09:57.9495|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:09:57.9495|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:09:57.9634|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:09:57.9791|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__id_0
+2022-09-12 09:09:57.9791|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 14.8924ms.
+2022-09-12 09:09:57.9791|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2022-09-12 09:09:57.9791|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API) in 39.4294ms
+2022-09-12 09:09:57.9791|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 54.6415ms 404 text/plain; charset=utf-8
+2022-09-12 09:10:08.9024|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:1028/api/products/20  
+2022-09-12 09:10:08.9024|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "DeleteProduct", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteProduct(Int32) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:10:08.9187|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:10:08.9187|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:10:08.9319|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API) - Validation state: Valid
+2022-09-12 09:10:08.9319|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__id_0
+2022-09-12 09:10:08.9319|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-09-12 09:10:08.9476|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 12.0336ms.
+2022-09-12 09:10:08.9476|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2022-09-12 09:10:08.9476|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.DeleteProduct (ProductProject.API) in 40.3634ms
+2022-09-12 09:10:08.9476|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 56.5778ms 204 
+2022-09-12 09:10:18.2262|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=20  
+2022-09-12 09:10:18.2290|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:10:18.2290|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:10:18.2290|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:10:18.2290|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:10:18.2458|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:10:18.2458|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 3.9174ms.
+2022-09-12 09:10:18.2458|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 09:10:18.2458|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 23.1345ms
+2022-09-12 09:10:18.2458|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 31.3687ms 404 text/plain
+2022-09-12 09:20:34.5029|INFO|ProductProject.API.Program|Initializing application...
+2022-09-12 09:20:37.3911|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:20:37.5065|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:20:37.5772|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [master] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2022-09-12 09:20:37.6120|ERROR|ProductProject.API.Program|An error occurred while migrating the database.
+2022-09-12 09:20:37.6509|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\PSF33\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-12 09:20:38.0312|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/  
+2022-09-12 09:20:38.0312|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:1028/  0
+2022-09-12 09:20:38.0447|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.5589ms 200 
+2022-09-12 09:20:38.1251|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 90.4758ms 404 text/plain
+2022-09-12 09:20:38.1689|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/favicon.ico  
+2022-09-12 09:20:38.1689|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.8673ms 404 text/plain
+2022-09-12 09:20:41.3517|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products?id=20  
+2022-09-12 09:20:41.3800|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:20:41.3981|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:20:41.4121|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:20:41.6836|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:20:41.7666|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__cityId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Date], [c].[Description], [c].[ProductType], [c].[State], [c].[Value]
+FROM [Products] AS [c]
+WHERE [c].[Id] = @__cityId_0
+2022-09-12 09:20:41.7840|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 94.8654ms.
+2022-09-12 09:20:41.7941|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2022-09-12 09:20:41.7941|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 414.3443ms
+2022-09-12 09:20:41.8089|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 455.1217ms 404 text/plain
+2022-09-12 09:20:44.3850|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:1028/api/products  
+2022-09-12 09:20:44.3850|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetProducts", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProducts(System.Nullable`1[System.Int32], System.String) on controller ProductProject.API.Controllers.ProductController (ProductProject.API).
+2022-09-12 09:20:44.3850|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.1.14-servicing-32113 initialized 'ProductContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-09-12 09:20:44.4027|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2022-09-12 09:20:44.4027|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) - Validation state: Valid
+2022-09-12 09:20:44.4195|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Date], [p].[Description], [p].[ProductType], [p].[State], [p].[Value]
+FROM [Products] AS [p]
+2022-09-12 09:20:44.4791|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69.1147ms.
+2022-09-12 09:20:44.4791|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductProject.API.Entities.Product, ProductProject.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 09:20:44.5275|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ProductProject.API.Controllers.ProductController.GetProducts (ProductProject.API) in 135.759ms
+2022-09-12 09:20:44.5275|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 145.9631ms 200 application/json; charset=utf-8
